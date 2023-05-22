@@ -22,11 +22,7 @@
 
 <!--                <td></td> &lt;!&ndash; Feel free to remove or modify this element if necessary. &ndash;&gt;-->
 
-
                 <td th:each="category : ${tableChoices}">
-<!--                    <p th:text = "${category.key}"></p>-->
-<!--                    <p th:text = "${tableChoices.get(tableChoices.indexOf(category.key))}"></p>-->
-<!--                    <p th:each="item : ${category.value}"></p>-->
                     <ul>
                         <li th:each="item : ${category.value}">
                             <a th:href="@{/list/jobs(column=${category.key},value=${item})}" th:text="${item}"></a>
